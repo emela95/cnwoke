@@ -1,5 +1,13 @@
 package main.java;
 
+/*
+  File:	InvalidOperationException
+  Author:	Alexandra Mehlhase
+  Date:        2/18/2019
+
+  Description: class for matrix positions
+*/
+
 /**
  * class for matrix positions
  */
