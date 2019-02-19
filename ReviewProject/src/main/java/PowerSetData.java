@@ -23,7 +23,7 @@ public class PowerSetData {
     NoSuchElementException, NegativeArraySizeException{
 
             StringTokenizer inputTokens = new StringTokenizer(string);
-            String[] RESULT = string.split("\s");
+            String[] RESULT = string.split("\t");
 
             String str = "";
 
