@@ -27,45 +27,45 @@ public class PowerSetData {
 
             String str = "";
 
-            int n; // will be the length of myArray
+            int num; // will be the length of myArray
             if (inputTokens.hasMoreTokens()) {
-                    n = inputTokens.countTokens();
+                    num = inputTokens.countTokens();
             } else {
                     throw new NoSuchElementException();
             }
 
-            // define the array of the right length n
-            if (n == 1) {
+            // define the array of the right length num
+            if (num == 1) {
 
                     // interpret the next number as number of entries and
-                    // generate a random vector with entries 1 ... n
+                    // generate a random vector with entries 1 ... num
                     str = inputTokens.nextToken();
-                    n = Integer.valueOf(str).intValue();
+                    num = Integer.valueOf(str).intValue();
                     // may throw NegativeArraySizeException
-                    myArray = new int[n];
-                    boolean[] tempArray = new boolean[n + 1];
+                    myArray = new int[num];
+                    boolean[] tempArray = new boolean[num + 1];
                     RandomNumber randGen = new RandomNumber();
                     int randNr;
-                    for (int i = 0; i < n; i++) {
+                    for (int i = 0; i < num; i++) {
                             do
-                                    randNr = randGen.nextIntRand(1, n);
+                                    randNr = randGen.nextIntRand(1, num);
                             while (tempArray[randNr]);
                             tempArray[randNr] = true;
                             myArray[i] = randNr;
                     }
             } else {
-                    int [] array = new int[n];
+                    int [] array = new int[num];
                     int count =0;
 
-                    for (int i = 0; i < n; i++) { // read the n numbers into the array
+                    for (int i = 0; i < num; i++) { // read the num numbers into the array
 
                             str = RESULT[i];
 
                             array[i-count] = Integer.valueOf(str).intValue();
 
                     }
-                    myArray = new int[n-count];
-                    myArray = Arrays.copyOfRange(array, 0, n-count);
+                    myArray = new int[num-count];
+                    myArray = Arrays.copyOfRange(array, 0, num-count);
 
 
            }
